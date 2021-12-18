@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    /* height:  100vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.637);
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.51), rgba(0, 0, 0, 1)), url("img/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: relative;
+}
+
+/* .wrapper-container{
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+
+.search-container{
+    background-color: var(--md-dark-color);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+
+
+
+.logo p span{
+    color: white;
+}
+
+.logo p {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin-top: 5px;
+
+}
+
+.search-element{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+} 
+
+
+
+
+
+
+
+.form-control{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px 16px 16px 16px;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.result-container .result-grid img{
+    height: 550px;
+    border-radius: 18px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+}
+
+@media screen and (max-width: 480px) {
+    .result-container .result-grid img{
+        width: 99%;
+    }
+}
+
+
+.movie-title{
+    margin-top: 25px;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.movie-info{
+    list-style: none;
+    align-items: center;
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    color: white;
+    margin-bottom: 25px;
+}
+
+ul li{
+    width: 20%;
+    max-width: 1200px;
+    font-weight: 400;
+    display: inline;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+  
+.genre{
+    background-color: #100c08;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.writer{
+    background-color: #100c08;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 5px ;
+}
+
+.actors{
+    background-color: #100c08;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    margin: 0 auto;
+    width: 350px;
+    margin-top: 5px ;
+}
+
+.plot{
+    background-color: #100c08;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    margin: 50px auto;
+    width: 900px;
+    
+}
+
+@media screen and (max-width: 480px) {
+    .plot {
+        width: 90%;
+    }
+}
+
