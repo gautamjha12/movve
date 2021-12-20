@@ -1,3 +1,9 @@
+// titles : https://omdbapi.com/?s=thor&page=1&apikey=bd97784f
+// details : https://omdbapi.com/?i=tt3896198&apikey=bd97784f
+
+// Titles: https://omdbapi.com/?s=thor&page=1&apikey=bd97784f
+// details: http://www.omdbapi.com/?i=tt3896198&apikey=bd97784f
+
 const movieSearchBox = document.getElementById('movie-search-box');
 const searchList = document.getElementById('search-list');
 const resultGrid = document.getElementById('result-grid');
@@ -11,6 +17,7 @@ async function loadMovies(searchTerm){
     if(data.Response == "True") displayMovieList(data.Search);
 }
 
+
 function findMovies(){
     let searchTerm = (movieSearchBox.value).trim();
     if(searchTerm.length > 0){
@@ -20,17 +27,6 @@ function findMovies(){
         searchList.classList.add('hide-search-list');
     }
 }
-
-// function bg() {
-
-//     const body = document.body;
-
-//     if(movies[idx].Poster != "N/A"){
-//         moviePoster = movies[idx].Poster
-//         body.setAttribute("style", "background-image: linear-gradient(rgba(0, 0, 0, 0.39), rgba(0, 0, 0, 1)),moviesPoster; background-size: cover; background-position: center; position:relative");
-//     }
-// }
-// bg();
 
 function displayMovieList(movies){
     searchList.innerHTML = "";
@@ -53,8 +49,10 @@ function displayMovieList(movies){
         </div>
         `;
         searchList.appendChild(movieListItem);
+    
     }
     loadMovieDetails();
+    bg()
 }
 
 function loadMovieDetails(){
@@ -73,7 +71,21 @@ function loadMovieDetails(){
     });
 }
 
+
 function displayMovieDetails(details){
+    let bgImg = details.Poster;
+    let preReq = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1))'
+    let x = document.getElementsByTagName("BODY")[0];
+    x.style.backgroundImage = preReq + ',' + `url(${bgImg})`;
+    x.style.backgroundRepeat = "no-repeat";
+    x.style.backgroundPosition = "center    ";
+    x.style.backgroundAttachment = "fixed";
+    x.style.backgroundSize = "cover";
+
+
+
+    // x.style.backgroundS.repe
+
     resultGrid.innerHTML = `
     <div class = "movie-poster">
         <img src = "${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt = "movie poster">
@@ -94,6 +106,11 @@ function displayMovieDetails(details){
     </div>
     `;
 
+
+    // body.setAttribute("style", "background-image: url(${details.Poster}); background-size: cover; background-position: center; position:relative");
+    // let backgroundImg =  document.getElementsByTagName("BODY")[0];
+    // backgroundImg.style.background = "grren"
+    // backgroundImg.setAttribute("style", "background: url('bgImg'))");
 }
 
 
