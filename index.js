@@ -52,7 +52,6 @@ function displayMovieList(movies){
     
     }
     loadMovieDetails();
-    bg()
 }
 
 function loadMovieDetails(){
